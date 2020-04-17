@@ -33,7 +33,6 @@ class App extends Component {
     });
   }
   giveDiscountHandler = (e) => {
-    // e.preventDefault();
     if(this.props.promoCode.toLowerCase() === 'discount'){
       this.setState({
         estimatedTotal: this.state.estimatedTotal * 0.9
@@ -57,7 +56,7 @@ class App extends Component {
           <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
           <hr />
           <PromoCodeDiscount
-            giveDiscount={() => this.giveDiscountHandler}
+            giveDiscount={() => this.giveDiscountHandler()}
             isDisabled={this.state.disablePromoButton} />
         </Container>
       </div>

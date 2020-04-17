@@ -56,8 +56,8 @@ class PromoCodeDiscount extends Component {
                   variant='success'
                   block
                   className="btn-round"
-                  disabled={this.props.disablePromoButton}
-                  onClick={this.props.giveDiscountHandler}
+                  disabled={this.props.isDisabled}
+                  onClick={this.props.giveDiscount}
                 >Apply </Button>
               </Form>
             </Col>
